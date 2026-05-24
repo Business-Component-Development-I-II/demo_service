@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SmsScheduler {
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(cron = "* * * * * *")
     void sendSms(){
         System.out.println("SMS sent");
     }
